@@ -147,23 +147,45 @@ svg text {
 	overflow: hidden;
 }
 
-#circle-valores::after {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: var(--ripple-y, 50%);
-	left: var(--ripple-x, 50%);
-	background: rgba(138, 139, 212, 0.4);
-	border-radius: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	opacity: 0;
-	pointer-events: none;
-	z-index: 1;
+#circle-valores:hover {
+	cursor: none;
 }
 
-#circle-valores.ripple::after {
-	animation: ripple 1s ease-out;
+#circle-valores .cursor-dot {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #ffffee;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity 0.2s, transform 0.1s;
+	z-index: 4;
+}
+
+#circle-valores::after,
+#circle-valores::before {
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: var(--ripple-y, 50%);
+	left: var(--ripple-x, 50%);
+	background: #ffffee;
+	border-radius: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	pointer-events: none;
+	z-index: 3;
+	opacity: 1;
+}
+
+#circle-valores.ripple-out::after {
+	animation: rippleOut 0.3s ease-out forwards;
+}
+
+#circle-valores.ripple-in::before {
+	animation: rippleIn 0.3s ease-out forwards;
 }
 
 #circle-valores .circle-front,
@@ -173,41 +195,32 @@ svg text {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	transition: opacity 0.3s ease;
-}
-
-#circle-valores .circle-front {
-	opacity: 1;
-}
-
-#circle-valores .circle-back {
-	opacity: 0;
-	pointer-events: none;
-}
-
-#circle-valores.hide-front .circle-front {
-	opacity: 0;
-}
-
-#circle-valores.active .circle-front {
-	opacity: 0;
-	pointer-events: none;
-}
-
-#circle-valores.active.show-icons .circle-back {
-	opacity: 1;
 	pointer-events: auto;
 }
 
+#circle-valores .circle-front {
+	z-index: 1;
+}
+
+#circle-valores .circle-back {
+	z-index: 1;
+	display: none;
+}
+
+#circle-valores.active.show-icons .circle-back {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 1vw;
+}
+
 #circle-valores .circle-back i {
-	font-size: 24px;
 	color: #fff;
 	background: rgba(0, 0, 0, 0.2);
 	padding: 8px;
 	border-radius: 50%;
 	cursor: pointer;
 	transition: transform 0.2s, background 0.2s;
-	margin: 5px;
+	z-index: 5;
 }
 
 #circle-valores .circle-back i:hover {
@@ -215,22 +228,30 @@ svg text {
 	background: rgba(0, 0, 0, 0.4);
 }
 
-@keyframes ripple {
+@keyframes rippleOut {
 	0% {
 		transform: translate(-50%, -50%) scale(0);
-		opacity: 0.6;
 	}
 
 	100% {
-		transform: translate(-50%, -50%) scale(2.2);
-		opacity: 0;
+		transform: translate(-50%, -50%) scale(1);
 	}
 }
 
+@keyframes rippleIn {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+/* Estilos de la tercer slide */
 
 
-
-/* Media queries compartidas (mobile-first) */
+/* Media queries de las 3 slides (mobile-first) */
 
 @media (min-width: 400px) {}
 
