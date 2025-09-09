@@ -1,3 +1,53 @@
-.test-carousel {
-	background-color: gray;
+.main-carousel {
+	background: linear-gradient(to right,
+			#a2ffff 0%,
+			#ccffff 30%,
+			#ccffff 70%,
+			#a2ffff 100%);
+}
+
+.carousel-indicators {
+	margin-bottom: 2rem;
+}
+
+.carousel-indicators button[type="button"] {
+	background-color: #00ffff;
+}
+
+.carousel-indicators button[type="button"].active {
+	background-color: #8a8bd4;
+}
+
+.carousel-control-prev>i,
+.carousel-control-next>i {
+	color: #00ffff;
+}
+
+.carousel-control-prev:active>i,
+.carousel-control-next:active>i {
+	color: #8a8bd4;
+}
+
+svg text {
+	font-family: Lora;
+	letter-spacing: 8px;
+	stroke: #8a8bd4;
+	font-size: 80px;
+	font-weight: 700;
+	stroke-width: 3;
+	animation: nameAnimation 5s infinite alternate;
+}
+
+@keyframes nameAnimation {
+	0% {
+		stroke-dasharray: 0 50%;
+		stroke-dashoffset: 10%;
+		fill: #008d8d
+	}
+
+	100% {
+		stroke-dasharray: 10% 0;
+		stroke-dashoffset: -10%;
+		fill: #008d8d00
+	}
 }
