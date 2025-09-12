@@ -4,16 +4,192 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <h1>Test</h1>
+    <div class="main-carousel">
+      <div id="carouselIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner" style="height: 100vh">
+          <div class="carousel-item active h-100">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <svg width="100%" height="100%">
+                <text x="50%" y="50%" text-anchor="middle">
+                  Nombre del equipo
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="carousel-item h-100">
+            <div class="d-flex flex-column align-items-center h-100">
+              <div id="second-slide-title"><h2>Trabajo y proyecto</h2></div>
+              <div class="circle-container mt-auto mb-auto">
+                <div class="circle" id="circle-proposito">
+                  <div class="circle-front">Propósito</div>
+                  <div class="circle-back">
+                    Buscamos crear una página que muestre lo que aprendimos y
+                    cómo trabajamos juntos
+                  </div>
+                </div>
+                <div class="circle" id="circle-valores">
+                  <div class="circle-front">Valores</div>
+                  <div class="circle-back">
+                    <i
+                      class="fa-solid fa-graduation-cap"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Aprendemos mientras diseñamos y programamos, mejorando nuestras habilidades"
+                    ></i>
+                    <i
+                      class="fa-solid fa-calendar-check"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Nos aseguramos de cumplir con los plazos y mantener la calidad del trabajo"
+                    ></i>
+                    <i
+                      class="fa-solid fa-handshake"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Colaboramos para que cada parte del proyecto funcione a la perfección"
+                    ></i>
+                    <i
+                      class="fa-solid fa-lightbulb"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Buscamos ideas originales para que la página sea visual y atractiva"
+                    ></i>
+                  </div>
+                </div>
+                <div class="circle" id="circle-metodo">
+                  <div class="circle-front">Método</div>
+                  <div class="circle-back">
+                    Trabajamos juntos dividiendo tareas, revisando cada sección
+                    y asegurando que la página sea funcional y atractiva
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item h-100">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div
+                id="name-list"
+                class="d-flex justify-content-evenly align-items-center flex-wrap gap-4"
+              >
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">Lautaro Colella</h5>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer"
+                      class="btn btn-primary"
+                      >Visitar página</a
+                    >
+                  </div>
+                </div>
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">Cristian Paez</h5>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer"
+                      class="btn btn-primary"
+                      >Visitar página</a
+                    >
+                  </div>
+                </div>
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">Santiago Rojas</h5>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer"
+                      class="btn btn-primary"
+                      >Visitar página</a
+                    >
+                  </div>
+                </div>
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">Silvana Fernandez</h5>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer"
+                      class="btn btn-primary"
+                      >Visitar página</a
+                    >
+                  </div>
+                </div>
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-title mb-4">Silvana Alvarez</h5>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer"
+                      class="btn btn-primary"
+                      >Visitar página</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselIndicators"
+          data-bs-slide="prev"
+        >
+          <i class="fa-solid fa-chevron-left fa-2x"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselIndicators"
+          data-bs-slide="next"
+        >
+          <i class="fa-solid fa-chevron-right fa-2x"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
 
     <script src="./scripts/script.js"></script>
     <script
