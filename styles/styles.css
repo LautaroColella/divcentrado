@@ -96,12 +96,32 @@ svg text {
 	transform: scale(1.05);
 }
 
+.cursor-dot {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #ffffee;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity 0.1s ease;
+	z-index: 5;
+}
+
+/* Estilos del circulo proposito */
 #circle-proposito {
 	perspective: 1000px;
 	overflow: visible;
 	border: none;
 	outline: 2px solid #8a8bd4;
 	outline-offset: 2px;
+	position: relative;
+	user-select: none;
+}
+
+#circle-proposito:hover {
+	cursor: none;
 }
 
 #circle-proposito .circle-front,
@@ -116,31 +136,27 @@ svg text {
 	text-align: center;
 	padding: 2vw;
 	backface-visibility: hidden;
-	transition: transform 0.6s, background-color 0.3s;
+	transition: transform 0.6s ease;
 	border: 2px solid #8a8bd4;
+	will-change: transform;
 }
 
 #circle-proposito .circle-front {
 	z-index: 2;
+	background: white;
 }
 
 #circle-proposito .circle-back {
-	transform: rotateY(180deg);
+	z-index: 1;
 	font-size: 1vw;
 }
 
-#circle-proposito.active .circle-front {
-	transform: rotateY(180deg);
-}
-
-#circle-proposito.active .circle-back {
-	transform: rotateY(0deg);
-}
-
-#circle-proposito:active {
+#circle-proposito .circle-back:active,
+#circle-proposito .circle-front:active {
 	background-color: #ffffee;
 }
 
+/* Estilos del circulo valores */
 #circle-valores {
 	margin-bottom: 18vw;
 	position: relative;
@@ -149,19 +165,6 @@ svg text {
 
 #circle-valores:hover {
 	cursor: none;
-}
-
-#circle-valores .cursor-dot {
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	background: #ffffee;
-	pointer-events: none;
-	transform: translate(-50%, -50%);
-	opacity: 0;
-	transition: opacity 0.2s, transform 0.1s;
-	z-index: 4;
 }
 
 #circle-valores::after,
@@ -247,6 +250,8 @@ svg text {
 		transform: translate(-50%, -50%) scale(0);
 	}
 }
+
+/* Estilos del circulo metodo */
 
 /* Estilos de la tercer slide */
 
