@@ -12,6 +12,7 @@ En este proyecto vas a conocernos más a fondo: quiénes somos, nuestros gustos 
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Google Fonts](https://img.shields.io/badge/Google%20Fonts-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Font Awesome](https://img.shields.io/badge/Font%20Awesome-Orange?style=for-the-badge&logo=fontawesome&logoColor=white)
 MAS LIBRERIAS
 ---
 
@@ -21,15 +22,14 @@ MAS LIBRERIAS
 | `index.html`      | Página principal |
 | `/style`          | Hojas de estilo CSS |
 | `/js`             | Archivos JavaScript |
-| `/sources`        | Multimedia (imágenes, videos, etc.) |
+| `/img`        | Multimedia (imágenes, videos, etc.) |
 | `otras páginas`   | Cada página está organizada en su propia carpeta o rama |
 
 ---
 
 ## ⚡ JavaScript
 Las funciones dinámicas implementadas incluyen:
-- Interactividad en la portada.
-- Dinámicas individuales en cada página del proyecto (descripción de integrantes, gustos y actividades).  
+- DETALLAR CADA FUNCION DE CADA PAGINA
 
 > 💡 *Este apartado se irá ampliando a medida que se agreguen más funcionalidades específicas en los siguientes trabajos prácticos.*
 
