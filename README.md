@@ -36,6 +36,6 @@ Las funciones dinámicas implementadas incluyen:
 ---
 
 ## 🚀 Enlace al Proyecto Desplegado 🔜
-👉 [Publicación en Vercel o GitHub Pages](#) *(agregar el link cuando esté disponible)*  
+👉 [Publicación en Vercel o GitHub Pages](#) * 
 
 ---
