@@ -116,6 +116,7 @@ svg text {
 }
 
 /* Estilos del circulo proposito */
+
 #circle-proposito {
 	perspective: 1000px;
 	overflow: visible;
@@ -159,6 +160,7 @@ svg text {
 }
 
 /* Estilos del circulo valores */
+
 #circle-valores {
 	margin-bottom: 18vw;
 	position: relative;
@@ -250,6 +252,7 @@ svg text {
 }
 
 /* Estilos del circulo metodo */
+
 #circle-metodo {
 	position: relative;
 	overflow: hidden;
@@ -282,6 +285,24 @@ svg text {
 }
 
 /* Estilos de la tercer slide */
+
+#name-list {
+	max-width: 70%;
+}
+
+#name-list .card {
+	background-color: #a2ffff;
+	min-width: 210px;
+	width: 16vw;
+	max-width: 250px;
+	height: auto;
+	border: 4px double;
+	box-sizing: content-box;
+}
+
+#name-list h5 {
+	font-size: 22px;
+}
 
 
 /* Media queries de las 3 slides (mobile-first) */
