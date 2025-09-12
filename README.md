@@ -1,8 +1,8 @@
-# ✨ Proyecto FrontEnd
+# 🖥️ Proyecto FrontEnd 💻
 
-## 📖 Descripción del Proyecto
-Somos un grupo de estudiantes que queremos darnos a conocer para, en un futuro, conseguir un trabajo en empresas IT.  
-En este proyecto vas a conocernos más a fondo: quiénes somos, nuestros gustos y qué hacemos en nuestros tiempos libres.  
+## Descripción del Proyecto
+Somos un grupo de estudiantes del Instituto de Formación Técnica Superior N° 29 que queremos darnos a conocer para, en un futuro, conseguir un trabajo en empresas IT.  
+En este proyecto vas a conocernos más a fondo: quiénes somos, nuestros gustos y habilidades,  y qué hacemos en nuestros tiempos libres.  
 
 ---
 
@@ -12,7 +12,7 @@ En este proyecto vas a conocernos más a fondo: quiénes somos, nuestros gustos 
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Google Fonts](https://img.shields.io/badge/Google%20Fonts-4285F4?style=for-the-badge&logo=google&logoColor=white)
-
+MAS LIBRERIAS
 ---
 
 ## 📂 Estructura de Archivos
@@ -35,7 +35,7 @@ Las funciones dinámicas implementadas incluyen:
 
 ---
 
-## 🚀 Enlace al Proyecto Desplegado
+## 🚀 Enlace al Proyecto Desplegado 🔜
 👉 [Publicación en Vercel o GitHub Pages](#) *(agregar el link cuando esté disponible)*  
 
 ---
