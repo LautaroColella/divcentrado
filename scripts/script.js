@@ -7,13 +7,19 @@ let tooltipTimeouts = [];
 const propositoCircle = document.getElementById("circle-proposito");
 const propositoCircleFront = propositoCircle.querySelector(".circle-front");
 const propositoCircleBack = propositoCircle.querySelector(".circle-back");
+const valoresCircle = document.getElementById("circle-valores");
+const metodoCircle = document.getElementById("circle-metodo");
+const metodoCircleFront = metodoCircle.querySelector(".circle-front");
+const metodoCircleBack = metodoCircle.querySelector(".circle-back");
+
+let metodoCircleFlipped = false;
+let metodoCircleAnimating = false;
 let propositoCircleFlipped = false;
 let propositoCircleAnimating = false;
 const PROPOSITO_CIRCLE_DURATION = 600;
-const valoresCircle = document.getElementById("circle-valores");
 
 propositoCircle.addEventListener("click", (e) => {
-  if (propositoCircleAnimating) return; // Ignorar clicks durante la animacion para que no bugeen todo
+  if (propositoCircleAnimating) return; // Ignorar clicks durante la animacion
   propositoCircleAnimating = true;
 
   // Se agarra el x e y del mouse en referencia al circulo
@@ -152,6 +158,43 @@ valoresCircle.addEventListener("click", (e) => {
   }, 300);
 });
 
+metodoCircle.addEventListener("click", (e) => {
+  if (metodoCircleAnimating) return; // Ignorar clicks durante la animacion
+  metodoCircleAnimating = true;
+
+  // Se agarra el x e y del mouse en referencia al circulo
+  const rect = metodoCircle.getBoundingClientRect();
+  const clickX = e.clientX - rect.left - rect.width / 2;
+  const clickY = e.clientY - rect.top - rect.height / 2;
+
+  // Se hace pequeño hacia donde se clickeo
+  metodoCircle.style.transition = "transform 0.3s ease";
+  metodoCircle.style.transformOrigin = `${50 + (clickX / rect.width) * 100}% ${
+    50 + (clickY / rect.height) * 100
+  }%`;
+  metodoCircle.style.transform = "scale(0.01)";
+
+  setTimeout(() => {
+    // Mostrar el front o back
+    if (!metodoCircleFlipped) {
+      metodoCircleFront.style.opacity = 0;
+      metodoCircleBack.style.opacity = 1;
+    } else {
+      metodoCircleFront.style.opacity = 1;
+      metodoCircleBack.style.opacity = 0;
+    }
+    metodoCircleFlipped = !metodoCircleFlipped;
+
+    // Se expande desde donde se clickeo
+    metodoCircle.style.transition = "transform 0.3s ease";
+    metodoCircle.style.transform = "scale(1)";
+
+    setTimeout(() => {
+      metodoCircleAnimating = false;
+    }, 300);
+  }, 300);
+});
+
 // Cambiar el cursor en hover de los circulos por el circulito de color
 function attachCursorDot(circle) {
   const cursorDot = document.createElement("div");
@@ -187,4 +230,5 @@ function isTouchDevice() {
 if (!isTouchDevice()) {
   attachCursorDot(valoresCircle);
   attachCursorDot(propositoCircle);
+  attachCursorDot(metodoCircle);
 }
