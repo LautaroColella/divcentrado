@@ -168,11 +168,11 @@ metodoCircle.addEventListener("click", (e) => {
   const clickY = e.clientY - rect.top - rect.height / 2;
 
   // Se hace pequeño hacia donde se clickeo
-  metodoCircle.style.transition = "transform 0.3s ease";
+  metodoCircle.style.transition = "transform 0.4s ease";
   metodoCircle.style.transformOrigin = `${50 + (clickX / rect.width) * 100}% ${
     50 + (clickY / rect.height) * 100
   }%`;
-  metodoCircle.style.transform = "scale(0.01)";
+  metodoCircle.style.transform = "scale(0.05)";
 
   setTimeout(() => {
     // Mostrar el front o back
@@ -186,13 +186,13 @@ metodoCircle.addEventListener("click", (e) => {
     metodoCircleFlipped = !metodoCircleFlipped;
 
     // Se expande desde donde se clickeo
-    metodoCircle.style.transition = "transform 0.3s ease";
+    metodoCircle.style.transition = "transform 0.4s ease";
     metodoCircle.style.transform = "scale(1)";
 
     setTimeout(() => {
       metodoCircleAnimating = false;
-    }, 300);
-  }, 300);
+    }, 400);
+  }, 400);
 });
 
 // Cambiar el cursor en hover de los circulos por el circulito de color
