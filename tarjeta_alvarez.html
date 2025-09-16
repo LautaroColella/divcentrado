@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../frontend-ifts/styles/tarjeta_alvarez.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Tarjeta Personal Alvarez Silvana Paola</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="volver">Volver</a>
+        </nav>
+        <main class="card">
+            <figure class="card__avatar-wrap">
+                <img src="../frontend-ifts/img/imgAlvarezPerfil.jpeg" alt="Avatar de Silvana Paola Alvarez" class="avatar">
+            </figure>
+            <div class="card__content">
+                <h1 class="card__title">Alvarez Silvana Paola</h1>
+                <p class="card__meta"><strong>Ubicación: </strong>Tucumán, Argentina</p>
+                <p class="card__meta"><Strong>Edad: </Strong>36 años</p>
+
+                <section class="card__secction">
+                    <h2>Habilidades</h2>
+                    <ul class="list">
+                        <li>Desarrollo Web (HTML, CSS, JS)</li>
+                        <li>Programación en C, C#, Java, React</li>
+                        <li>Gestión de Proyectos</li>
+                        <li>Trabajo en Equipo</li>
+                    </ul>
+                </section>
+
+                <section class="card__secction">
+                    <h2>Música Faborita</h2>
+                    <ul id="artist-list" class="artist-list">
+                        <li data-idx="0">Miranda</li>
+                        <li data-idx="1">Katy Perry</li>
+                        <li data-idx="2">Dua Lipa</li>
+                        <li data-idx="3">Queen</li>
+                        <li data-idx="4">Colplay</li>
+                    </ul>
+                </section>
+
+                <section class="card__actions">
+                    <button class="btn" id="btn-color"><i data-lucide="palette"></i><span>Cambiar Estilo</span></button>
+                    <button id="btn-music" class="btn" aria-pressed="false"><i data-lucide="music"></i><span>música</span></button>
+                    <button id="btn-playpause" class="btn"><i data-lucide="volume-2"></i><span>Pausa</span></button>
+                </section>
+                  <!-- Elemento de audio (oculto) -->
+                <audio id="player" preload="auto"></audio>
+
+            </div>    
+
+        </main>
+    </header>
+    <footer class="site-footer">
+    <small>© 2025 | Tarjeta personal</small>
+  </footer>
+    <script src="../frontend-ifts/scripts/tarjeta_alvarez.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
