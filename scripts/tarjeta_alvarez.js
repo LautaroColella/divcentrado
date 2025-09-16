@@ -46,8 +46,8 @@ const TRACKS = [
   { name: 'Miranda',    src: 'audio/music1.mp3' },
   { name: 'Katy Perry', src: 'audio/music2.mp3' },
   { name: 'Dua Lipa',   src: 'audio/music3.mp3' },
-  { name: 'Coldplay',   src: 'audio/music4.mp3' },
-  { name: 'Queen',      src: 'audio/music5.mp3' },
+  { name: 'Queen',   src: 'audio/music4.mp3' },
+  { name: 'Coldplay',      src: 'audio/music5.mp3' },
 ];
 
 let idx = 0;
