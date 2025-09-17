@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<link>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../frontend-ifts/styles/tarjeta_alvarez.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <title>Tarjeta Personal Alvarez Silvana Paola</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html" class="volver">Volver</a>
-        </nav>
-        <main class="card">
-            <figure class="card__avatar-wrap">
-                <img src="../frontend-ifts/img/imgAlvarezPerfil.jpeg" alt="Avatar de Silvana Paola Alvarez" class="avatar" id="avatar">
-            </figure>
-            <div class="card__content">
-                <h1 class="card__title">Alvarez Silvana Paola</h1>
-                <p class="card__meta"><strong>Ubicación: </strong>Tucumán, Argentina</p>
-                <p class="card__meta"><Strong>Edad: </Strong>36 años</p>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tarjeta Personal - Alvarez Paola</title>
+        <link rel="stylesheet" href="styles/tarjeta_alvarez.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Librería de íconos Lucide -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+    <body>
 
-                <section class="card__secction">
+        <main class="card">
+            <!-- Avatar -->
+            <figure class="card__avatar-wrap">
+                <img src="img/imgAlvarezPerfil.png" alt="Foto de perfil de Paola" class="avatar" id="avatar">
+            </figure>
+
+            <!-- Contenido -->
+            <div class="card__content">
+                <h1 class="card__title">Alvarez Paola</h1>
+                <p class="card__meta"><strong>Ubicación:</strong> Tucumán, Argentina</p>
+                <p class="card__meta"><strong>Edad:</strong> 36 años</p>
+
+                <section class="card__section">
                     <h2>Habilidades</h2>
                     <ul class="list">
                         <li>Desarrollo Web (HTML, CSS, JS)</li>
@@ -32,36 +33,46 @@
                     </ul>
                 </section>
 
-                <section class="card__secction">
-                    <h2>Música Faborita</h2>
-                    <ul id="artist-list" class="artist-list">
-                        <li data-idx="0">Miranda</li>
-                        <li data-idx="1">Katy Perry</li>
-                        <li data-idx="2">Dua Lipa</li>
-                        <li data-idx="3">Queen</li>
-                        <li data-idx="4">Colplay</li>
+                <section class="card__section">
+                    <h2>Música Favorita</h2>
+                    <ul class="list">
+                        <li>Miranda</li>
+                        <li>Katy Perry</li>
+                        <li>Dua Lipa</li>
+                        <li>Coldplay</li>
                     </ul>
                 </section>
 
-                <section class="card__actions">
-                    <button class="btn" id="btn-avatar"><i data-lucide="image"></i><span>Cambiar Foto</span></button>
-                    <button class="btn" id="btn-color"><i data-lucide="palette"></i><span>Cambiar Estilo</span></button>
-                    <button id="btn-music" class="btn" aria-pressed="false"><i data-lucide="music"></i><span>música</span></button>
-                    <button id="btn-playpause" class="btn"><i data-lucide="volume-2"></i><span>Pausa</span></button>
+                <section class="card__section">
+                    <h2>Películas Favoritas</h2>
+                    <ul class="list">
+                        <li>El diablo viste a la moda</li>
+                        <li>Orgullo y prejuicio</li>
+                        <li>El conjuro</li>
+                        <li>Avengers</li>
+                    </ul>
                 </section>
-                  <!-- Elemento de audio (oculto) -->
-                <audio id="player" preload="auto"></audio>
+                <section class="card__section">
+                        <h2>Selección Actual</h2>
+                        <p id="seleccion-actual">Ninguno</p>
+                </section>
 
-            </div>    
-
+                <!-- Botones -->
+                <section class="card__actions">
+                    <button class="btn" id="btn-color"><i data-lucide="palette"></i><span>Cambiar Estilo</span></button>
+                    <button class="btn" id="btn-avatar"><i data-lucide="image"></i><span>Cambiar Foto</span></button>
+                    <button class="btn" id="btn-artistas"><i data-lucide="music"></i><span>Fondos Artistas</span></button>
+                    <button class="btn" id="btn-peliculas"><i data-lucide="film"></i><span>Fondos Películas</span></button>
+                </section>
+            </div>
         </main>
-    </header>
-    <footer class="site-footer">
-    <small>© 2025 | Tarjeta personal</small>
-  </footer>
-    <script src="../frontend-ifts/scripts/tarjeta_alvarez.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
+
+        <footer>
+            <small>© 2025 Tarjeta Personal - Paola Alvarez</small>
+        </footer>
+
+        <!-- Script JS -->
+        <script src="scripts/tarjeta_alvarez.js"></script>
+        <script>lucide.createIcons();</script>
+    </body> 
 </html>
