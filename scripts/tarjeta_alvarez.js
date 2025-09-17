@@ -30,6 +30,34 @@ btn?.addEventListener("click", () => {
   card.style.background = `url("${IMAGES[index]}") center / cover no-repeat`;
 });
 
+// ======================
+// Foto de Perfil
+// ======================
+const btnAvatar = document.getElementById("btn-avatar");
+const avatarImg = document.getElementById("avatar");
+
+// Lista de fotos disponibles
+const AVATARS = [
+  "img/imgAlvarezPerfil2.jpeg",
+  "img/imgAlvarezPerfil1.jpeg",
+  "img/imgAlvarezPerfil.jpeg"
+];
+
+let avatarIndex = 0;
+
+// Función para cambiar la foto
+function changeAvatar() {
+  avatarImg.classList.add("fade-out");
+  setTimeout(() => {
+    avatarIndex = (avatarIndex + 1) % AVATARS.length;
+    avatarImg.src = AVATARS[avatarIndex];
+    avatarImg.classList.remove("fade-out");
+  }, 400); // el mismo tiempo que la transición en CSS
+}
+
+// Evento al hacer click
+btnAvatar.addEventListener("click", changeAvatar);
+
 
 // ======================
 // Audio + artistas

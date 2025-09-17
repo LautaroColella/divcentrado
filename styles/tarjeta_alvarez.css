@@ -226,6 +226,15 @@ footer {
   outline-offset: 2px;
 }
 
+.avatar {
+  transition: opacity .4s ease;
+}
+
+.avatar.fade-out {
+  opacity: 0;
+}
+
+
 /* ===================== */
 /* Breakpoints           */
 /* ===================== */
