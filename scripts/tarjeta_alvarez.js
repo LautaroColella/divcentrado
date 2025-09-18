@@ -44,7 +44,7 @@ function changeAvatar() {
     avatarIndex = (avatarIndex + 1) % AVATERS.length;
     avatarImg.src = AVATERS[avatarIndex];
     avatarImg.classList.remove("fade-out");
-  }, 400);
+  }, 400); 
 }
 
 btnAvatar?.addEventListener("click", changeAvatar);
