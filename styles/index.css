@@ -1,0 +1,423 @@
+/* Estilos generales del carousel */
+
+.main-carousel {
+	background: linear-gradient(to right,
+			#a2ffff 0%,
+			#ccffff 30%,
+			#ccffff 70%,
+			#a2ffff 100%);
+}
+
+.carousel-indicators {
+	margin-bottom: 2rem;
+}
+
+.carousel-indicators button[type="button"] {
+	background-color: #00ffff;
+}
+
+.carousel-indicators button[type="button"].active {
+	background-color: #8a8bd4;
+}
+
+.carousel-control-prev>i,
+.carousel-control-next>i {
+	color: #00ffff;
+}
+
+.carousel-control-prev:active>i,
+.carousel-control-next:active>i {
+	color: #8a8bd4;
+}
+
+/* Estilos de la primer slide */
+
+svg text {
+	font-family: Lora;
+	letter-spacing: 0.5vw;
+	stroke: #8a8bd4;
+	font-size: 5vw;
+	font-weight: 700;
+	stroke-width: 0.2vw;
+	animation: nameAnimation 5s infinite alternate;
+}
+
+@keyframes nameAnimation {
+	0% {
+		stroke-dasharray: 0 50%;
+		stroke-dashoffset: 10%;
+		fill: #008d8d
+	}
+
+	100% {
+		stroke-dasharray: 10% 0;
+		stroke-dashoffset: -10%;
+		fill: #008d8d00
+	}
+}
+
+/* Estilos de la segunda slide */
+
+#second-slide-title {
+	margin-top: 8rem;
+}
+
+#second-slide-title>h2 {
+	font-size: 4vw;
+	font-family: "Lobster Two", sans-serif;
+}
+
+.circle-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 70%;
+}
+
+.circle {
+	position: relative;
+	width: 15vw;
+	height: 15vw;
+	border-radius: 50%;
+	background-color: white;
+	color: black;
+	border: 6px double #8a8bd4;
+	font-size: 1.5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 15px;
+	overflow: hidden;
+	transition: transform 0.3s, background-color 0.3s;
+}
+
+.circle:hover {
+	transform: scale(1.05);
+}
+
+.cursor-dot {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #ffffee;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity 0.1s ease;
+	z-index: 5;
+}
+
+#circle-proposito:hover,
+#circle-valores:hover,
+#circle-metodo:hover {
+	cursor: none;
+}
+
+/* Estilos del circulo proposito */
+
+#circle-proposito {
+	perspective: 1000px;
+	overflow: visible;
+	border: none;
+	outline: 2px solid #8a8bd4;
+	outline-offset: 2px;
+	position: relative;
+	user-select: none;
+}
+
+#circle-proposito .circle-front,
+#circle-proposito .circle-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 2vw;
+	backface-visibility: hidden;
+	transition: transform 0.6s ease;
+	border: 2px solid #8a8bd4;
+	will-change: transform;
+}
+
+#circle-proposito .circle-front {
+	z-index: 2;
+	background: white;
+}
+
+#circle-proposito .circle-back {
+	z-index: 1;
+	font-size: 1vw;
+}
+
+#circle-proposito .circle-back:active,
+#circle-proposito .circle-front:active {
+	background-color: #ffffee;
+}
+
+/* Estilos del circulo valores */
+
+#circle-valores {
+	margin-bottom: 18vw;
+	position: relative;
+	overflow: hidden;
+}
+
+#circle-valores::after,
+#circle-valores::before {
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: var(--ripple-y, 50%);
+	left: var(--ripple-x, 50%);
+	background: #ffffee;
+	border-radius: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	pointer-events: none;
+	z-index: 3;
+	opacity: 1;
+}
+
+#circle-valores.ripple-out::after {
+	animation: rippleOut 0.3s ease-out forwards;
+}
+
+#circle-valores.ripple-in::before {
+	animation: rippleIn 0.3s ease-out forwards;
+}
+
+#circle-valores .circle-front,
+#circle-valores .circle-back {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	pointer-events: auto;
+}
+
+#circle-valores .circle-front {
+	z-index: 1;
+}
+
+#circle-valores .circle-back {
+	z-index: 1;
+	display: none;
+}
+
+#circle-valores.active.show-icons .circle-back {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 1vw;
+}
+
+#circle-valores .circle-back i {
+	color: #fff;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 8px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 0.2s, background 0.2s;
+	z-index: 5;
+}
+
+#circle-valores .circle-back i:hover {
+	transform: scale(1.2);
+	background: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes rippleOut {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+@keyframes rippleIn {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+/* Estilos del circulo metodo */
+
+#circle-metodo {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: transform 0.6s ease;
+}
+
+#circle-metodo .circle-front,
+#circle-metodo .circle-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 2vw;
+}
+
+#circle-metodo .circle-front {
+	z-index: 2;
+	opacity: 1;
+}
+
+#circle-metodo .circle-back {
+	z-index: 1;
+	opacity: 0;
+	font-size: 0.9vw;
+}
+
+/* Estilos de la tercer slide */
+
+#name-list {
+	max-width: 70%;
+}
+
+#name-list .card {
+	background-color: #a2ffff;
+	min-width: 210px;
+	width: 16vw;
+	max-width: 250px;
+	height: auto;
+	border: 4px double;
+	box-sizing: content-box;
+}
+
+#name-list h5 {
+	font-size: 28px;
+	font-family: "Caveat", cursive;
+	font-weight: 700;
+	font-optical-sizing: auto;
+}
+
+
+/* Media queries de las 3 slides (mobile-first) */
+@media (min-width: 400px) {
+	#second-slide-title>h2 {
+		font-size: 8vw;
+	}
+
+	.circle-container {
+		flex-direction: column;
+		row-gap: 20px;
+	}
+
+	.circle {
+		width: 150px;
+		height: 150px;
+		font-size: 20px;
+	}
+
+	#circle-proposito .circle-back {
+		font-size: 12px;
+	}
+
+	#circle-metodo .circle-back {
+		font-size: 10px;
+	}
+
+	#circle-valores {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 600px) {
+	#second-slide-title>h2 {
+		font-size: 7vw;
+	}
+
+	.circle-container {
+		flex-direction: row;
+		row-gap: 0;
+	}
+
+	.circle-container>.circle {
+		flex: 0 0 auto;
+	}
+
+	.circle {
+		width: 25vw;
+		height: 25vw;
+		font-size: 3vw;
+	}
+
+	#circle-proposito .circle-back,
+	#circle-metodo .circle-back {
+		font-size: 1.6vw;
+	}
+
+	#circle-proposito {
+		margin-right: 2vw;
+	}
+
+	#circle-valores {
+		margin-left: 2vw;
+	}
+}
+
+@media (min-width: 900px) {
+	#second-slide-title>h2 {
+		font-size: 6vw;
+	}
+
+	.circle {
+		width: 20vw;
+		height: 20vw;
+		font-size: 2vw;
+	}
+
+	#circle-proposito {
+		margin-right: 0;
+	}
+
+	#circle-proposito .circle-back,
+	#circle-metodo .circle-back {
+		font-size: 1.4vw;
+	}
+
+	#circle-valores {
+		margin-bottom: 24vw;
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 1200px) {
+	#second-slide-title>h2 {
+		font-size: 4vw;
+	}
+
+	.circle {
+		width: 15vw;
+		height: 15vw;
+		font-size: 1.2vw;
+	}
+
+	#circle-proposito .circle-back,
+	#circle-metodo .circle-back {
+		font-size: 1vw;
+	}
+
+	#circle-valores {
+		margin-bottom: 18vw;
+	}
+}
