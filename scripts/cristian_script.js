@@ -1,11 +1,3 @@
-// --- menu hamburguesa ---
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
-
 // --- card giratoria ---
 document.querySelectorAll(".flip-card").forEach(card => {
   card.addEventListener("click", () => {

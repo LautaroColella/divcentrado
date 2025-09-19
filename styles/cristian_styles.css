@@ -41,15 +41,6 @@ body {
   font-weight: bold;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
 
 .perfil {
   display: flex;
@@ -199,30 +190,6 @@ footer {
     width: 100%;
   }
 
-  .menu-toggle {
-    display: block; /* muestra menu */
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #003366;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    color: white;
-    margin: 8px 0;
-    text-align: center;
-  }
 }
 
 
@@ -238,10 +205,5 @@ footer {
   .social-grid {
     grid-template-columns: 1fr; /* redes apiladas */
     gap: 10px;
-  }
-
-  .nav-links a {
-    display: block;
-    margin: 8px 0;
   }
 }
