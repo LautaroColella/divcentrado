@@ -304,7 +304,10 @@ svg text {
 }
 
 #name-list h5 {
-	font-size: 22px;
+	font-size: 28px;
+	font-family: "Caveat", cursive;
+	font-weight: 700;
+	font-optical-sizing: auto;
 }
 
 
