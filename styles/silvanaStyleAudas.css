@@ -1,0 +1,159 @@
+/* -----------------------------------
+   MODO AUDAZ — Estilo visual intenso
+   ----------------------------------- */
+
+body.modo-audaz {
+  font-family: 'Anton', sans-serif;
+  background-image: url('../img/silvanaFondoAudas.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fefefe;
+  transition: all 0.5s ease;
+}
+
+/* Frase principal */
+.frase-titulo {
+  font-size: 2rem;
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-shadow: 2px 2px #000;
+}
+
+/* Sección central con avatar y datos */
+.seccion-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+/* Avatar rectangular más compacto */
+.avatar-rectangular {
+  width: 220px;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 4px solid #ffcc00;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.avatar-rectangular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Datos personales a la izquierda */
+.info-lateral.izquierda {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+.dato-nombre {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.dato-secundario {
+  font-size: 1rem;
+  color: #fefefe;
+}
+
+/* Presentación a la derecha */
+.info-lateral.derecha {
+  max-width: 300px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fefefe;
+  font-weight: 500;
+}
+
+/* Bloques inferiores */
+.bloques-info {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.bloque {
+  background-color: rgba(26, 26, 26, 0.85);
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.bloque:hover {
+  transform: scale(1.05);
+  background-color: #330000;
+}
+
+.bloque h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ffcc00;
+  text-transform: uppercase;
+}
+
+.bloque ul li {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #fefefe;
+}
+
+/* Botón de volver arriba a la izquierda */
+.btn-volver-superior {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #ffcc00;
+  color: #330000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: bold;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver-superior:hover {
+  background-color: #ffaa00;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .seccion-central {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-lateral {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .bloques-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloque {
+    width: 90%;
+  }
+}

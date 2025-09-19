@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silvana Fernández</title>
+  <link rel="stylesheet" href="./styles/silvanaStyleBase.css" />
+  <link rel="stylesheet" href="./styles/silvanaStyleSuave.css" />
+  <link rel="stylesheet" href="./styles/silvanaStyleAudas.css" />
+</head>
+<body class="modo-suave">
+
+  <!-- Botón de regreso arriba a la izquierda -->
+  <a href="index.html" class="btn-volver-superior">← Volver</a>
+
+  <main class="presentacion">
+
+    <!-- Frase principal -->
+    <h1 class="frase-titulo">La belleza está en el equilibrio.</h1>
+
+    <!-- Sección central con avatar y datos -->
+    <section class="seccion-central">
+      
+      <!-- Datos personales a la izquierda -->
+      <div class="info-lateral izquierda">
+        <p class="dato-nombre">Silvana Fernández</p>
+        <p class="dato-secundario">Gral Roca, Río Negro</p>
+        <p class="dato-secundario">42 años</p>
+      </div>
+
+      <!-- Avatar rectangular en el centro -->
+      <div class="avatar-rectangular" id="avatar-toggle">
+        <img src="./img/silvanaSuave.jpg" alt="Avatar Silvana Suave" id="avatar-img" />
+      </div>
+
+      <!-- Presentación a la derecha -->
+      <div class="info-lateral derecha">
+        <p class="presentacion-texto">
+          Me especializo en organizar procesos, facilitar la comunicación y crear entornos donde las personas pueden crecer y colaborar con confianza.
+          Busco equilibrio entre lo humano y lo profesional, entre lo estético y lo funcional.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bloques inferiores que cambian según el estilo -->
+    <section class="bloques-info">
+      <div class="bloque bloque-habilidades">
+        <h2>Habilidades</h2>
+        <ul id="lista-habilidades">
+          <li>Organización metódica</li>
+          <li>Comunicación empática</li>
+          <li>Diseño simbólico</li>
+        </ul>
+      </div>
+
+      <div class="bloque bloque-peliculas">
+        <h2>Películas favoritas</h2>
+        <ul id="lista-peliculas">
+          <li>Amélie</li>
+          <li>La vida secreta de las palabras</li>
+          <li>El viaje de Chihiro</li>
+        </ul>
+      </div>
+
+      <div class="bloque bloque-musica">
+        <h2>Música favorita</h2>
+        <ul id="lista-musica">
+          <li>Ludovico Einaudi</li>
+          <li>Sufjan Stevens</li>
+          <li>Carla Morrison</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Script de transformación visual -->
+  <script src="./scripts/silvanaEstilo-toggle.js"></script>
+</body>
+</html>
