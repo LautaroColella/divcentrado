@@ -310,8 +310,34 @@ svg text {
 	font-optical-sizing: auto;
 }
 
+/* Estilos de la cuarta slide */
+#bitacora {
+	max-width: 70%;
+	max-height: 85vh;
+	overflow-y: auto;
+}
 
-/* Media queries de las 3 slides (mobile-first) */
+#bitacora::-webkit-scrollbar {
+	width: 8px;
+}
+
+#bitacora::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+}
+
+#bitacora h2,
+#bitacora h3 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+}
+
+#bitacora article p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+/* Media queries de las 3 primeras slides (mobile-first) */
 @media (min-width: 400px) {
 	#second-slide-title>h2 {
 		font-size: 8vw;
