@@ -1,95 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><title>Paola | Grupo 4</title></title>
-        <link rel="stylesheet" href="styles/tarjeta_alvarez.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <!-- Librería de íconos Lucide -->
-        <script src="https://unpkg.com/lucide@latest"></script>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html" class="volver"><i data-lucide="arrow-left"></i> Portada</a>
-            </nav>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paola | Grupo 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/tarjeta_alvarez.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html" class="volver"
+          ><i data-lucide="arrow-left"></i> Portada</a
+        >
+      </nav>
+    </header>
 
-        <main class="card">
-            <!-- Avatar -->
-            <figure class="card__avatar-wrap">
-                <img src="img/imgAlvarezPerfil.png" alt="Foto de perfil de Paola" class="avatar" id="avatar">
-            </figure>
+    <main class="card">
+      <!-- Avatar -->
+      <figure class="card__avatar-wrap">
+        <img
+          src="./img/imgAlvarezPerfil.png"
+          alt="Foto de perfil de Paola"
+          class="avatar"
+          id="avatar"
+        />
+      </figure>
 
-            <!-- Contenido -->
-            <div class="card__content">
-                <h1 class="card__title">Alvarez Paola</h1>
-                <p class="card__meta"><strong>Ubicación:</strong> Tucumán, Argentina</p>
-                <p class="card__meta"><strong>Edad:</strong> 36 años</p>
+      <!-- Contenido -->
+      <div class="card__content">
+        <h1 class="card__title">Alvarez Paola</h1>
+        <p class="card__meta"><strong>Ubicación:</strong> Tucumán, Argentina</p>
+        <p class="card__meta"><strong>Edad:</strong> 36 años</p>
 
-                <section class="card__section">
+        <section class="card__section">
+          <h2>Presentación</h2>
+          <p class="presentacion">
+            Soy estudiante de dos carreras vinculadas a la tecnología. Me
+            apasionan la programación, el diseño de interfaces y el trabajo en
+            equipo. Participé en proyectos académicos y busco seguir creciendo
+            en el área de desarrollo web y de software. En mi tiempo libre
+            disfruto de jugar videojuegos, escuchar música y compartir momentos
+            con mi familia y mis mascotas.
+          </p>
+        </section>
 
-                    <h2>Presentación</h2>
-                    <p class="presentacion">
-                        Soy estudiante de dos carreras vinculadas a la tecnología. 
-                        Me apasionan la programación, el diseño de interfaces y el trabajo en equipo. 
-                        Participé en proyectos académicos y busco seguir creciendo 
-                        en el área de desarrollo web y de software. En mi tiempo libre disfruto de jugar videojuegos, 
-                        escuchar música y compartir momentos con mi familia y mis mascotas.
-                    </p>
-                </section>
+        <section class="card__section">
+          <h2>Habilidades</h2>
+          <ul class="list">
+            <li>Desarrollo Web (HTML, CSS, JS)</li>
+            <li>Programación en C, C#, Java, React</li>
+            <li>Gestión de Proyectos</li>
+            <li>Trabajo en Equipo</li>
+          </ul>
+        </section>
 
-                <section class="card__section">
-                    <h2>Habilidades</h2>
-                    <ul class="list">
-                        <li>Desarrollo Web (HTML, CSS, JS)</li>
-                        <li>Programación en C, C#, Java, React</li>
-                        <li>Gestión de Proyectos</li>
-                        <li>Trabajo en Equipo</li>
-                    </ul>
-                </section>
+        <section class="card__section">
+          <h2>Música Favorita</h2>
+          <ul class="list">
+            <li>Miranda</li>
+            <li>Katy Perry</li>
+            <li>Dua Lipa</li>
+            <li>Coldplay</li>
+          </ul>
+        </section>
 
-                <section class="card__section">
-                    <h2>Música Favorita</h2>
-                    <ul class="list">
-                        <li>Miranda</li>
-                        <li>Katy Perry</li>
-                        <li>Dua Lipa</li>
-                        <li>Coldplay</li>
-                    </ul>
-                </section>
+        <section class="card__section">
+          <h2>Películas Favoritas</h2>
+          <ul class="list">
+            <li>El diablo viste a la moda</li>
+            <li>Orgullo y prejuicio</li>
+            <li>El conjuro</li>
+            <li>Avengers</li>
+          </ul>
+        </section>
+        <section class="card__section">
+          <h2>Selección Actual</h2>
+          <p id="seleccion-actual">Ninguno</p>
+        </section>
 
-                <section class="card__section">
-                    <h2>Películas Favoritas</h2>
-                    <ul class="list">
-                        <li>El diablo viste a la moda</li>
-                        <li>Orgullo y prejuicio</li>
-                        <li>El conjuro</li>
-                        <li>Avengers</li>
-                    </ul>
-                </section>
-                <section class="card__section">
-                        <h2>Selección Actual</h2>
-                        <p id="seleccion-actual">Ninguno</p>
-                </section>
+        <!-- Botones -->
+        <section class="card__actions">
+          <button class="btn" id="btn-color">
+            <i data-lucide="palette"></i><span>Cambiar Estilo</span>
+          </button>
+          <button class="btn" id="btn-avatar">
+            <i data-lucide="image"></i><span>Cambiar Foto</span>
+          </button>
+          <button class="btn" id="btn-artistas">
+            <i data-lucide="music"></i><span>Fondos Artistas</span>
+          </button>
+          <button class="btn" id="btn-peliculas">
+            <i data-lucide="film"></i><span>Fondos Películas</span>
+          </button>
+        </section>
+      </div>
+    </main>
 
-                <!-- Botones -->
-                <section class="card__actions">
-                    <button class="btn" id="btn-color"><i data-lucide="palette"></i><span>Cambiar Estilo</span></button>
-                    <button class="btn" id="btn-avatar"><i data-lucide="image"></i><span>Cambiar Foto</span></button>
-                    <button class="btn" id="btn-artistas"><i data-lucide="music"></i><span>Fondos Artistas</span></button>
-                    <button class="btn" id="btn-peliculas"><i data-lucide="film"></i><span>Fondos Películas</span></button>
-                </section>
-            </div>
-        </main>
+    <footer>
+      <small>© 2025 Tarjeta Personal - Paola Alvarez</small>
+    </footer>
 
-        <footer>
-            <small>© 2025 Tarjeta Personal - Paola Alvarez</small>
-        </footer>
-
-        <!-- Script JS -->
-        <script src="scripts/tarjeta_alvarez.js"></script>
-        <script>lucide.createIcons();</script>
-    </body> 
+    <!-- Script JS -->
+    <script src="./scripts/tarjeta_alvarez.js"></script>
+    <!-- Librería de íconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
