@@ -60,6 +60,6 @@ Las funciones dinámicas implementadas incluyen:
 
 ## 🚀 Enlace al Proyecto Desplegado
 
-[Publicación en Vercel](https://frontend-ifts.vercel.app/)
+[Publicación en Vercel](https://divcentrado.vercel.app/)
 
 ---
