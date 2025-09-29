@@ -17,8 +17,6 @@ html {
 body {
   line-height: 1.6;
   font-family: 'Lora', serif; /* Se sobrescribe en modo audaz */
-  color: #333;
-  background-color: #fff;
   transition: all 0.5s ease;
   overflow-x: hidden;   /* Oculta el scroll horizontal */
   overflow-y: auto;     /* Permite scroll vertical si es necesario */
@@ -67,17 +65,11 @@ main.presentacion {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background-color: #8a8bd4;
-  color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   font-weight: bold;
   z-index: 10;
   transition: background-color 0.3s ease;
-}
-
-.btn-volver-superior:hover {
-  background-color: #6a6bb4;
 }
 
 /* Transiciones suaves */

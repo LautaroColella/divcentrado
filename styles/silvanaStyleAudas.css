@@ -61,14 +61,15 @@ body.modo-audaz {
   color: #ffcc00;
 }
 
-.dato-nombre {
+body.modo-audaz .dato-nombre {
+  color:#fffb00;
   font-size: 1.4rem;
   margin-bottom: 0.3rem;
 }
 
 .dato-secundario {
   font-size: 1rem;
-  color: #fefefe;
+  color:#fffb00;
 }
 
 /* Presentación a la derecha */
@@ -76,7 +77,7 @@ body.modo-audaz {
   max-width: 300px;
   font-size: 1rem;
   line-height: 1.5;
-  color: #fefefe;
+  color:#fffb00;
   font-weight: 500;
 }
 
